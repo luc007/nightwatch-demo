@@ -1,25 +1,22 @@
 {
-  "name": "walmart-demo-tests",
+  "name": "nightwatch-walmart-demo",
   "version": "1.0.0",
   "description": "Walmart Canada - E2E Automation",
-  "author": { 
+  "author": {
     "name": "Mung Thai",
     "email": "mung.thai@outlook.com"
   },
-  "main": "nightwatch.js",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": ""
   },
-  "dependencies": {
-    "chromedriver": "^74.0.0",
-    "geckodriver": "^1.16.2"
-  },
-  "devDependencies": {
-    "nightwatch": "^1.0.19"
-  },
+  "dependencies": {},
+  "main": "nightwatch.js",
   "scripts": {
     "test": "npm test"
+  },
+  "devDependencies": {
+    "nightwatch": "^1.1.10"
   }
 }

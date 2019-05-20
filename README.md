@@ -17,7 +17,7 @@ $ npm install
 
 3) Download the `chromedriver` from http://chromedriver.storage.googleapis.com/index.html and `geckodriver` from https://github.com/mozilla/geckodriver and place both drivers in your `./lib/drivers` folder
 
-4) To run the test with chrome and firefox peers
+4) To run the test with chrome and firefox in parallel
 ```sh
 $ nightwatch.js --env chrome, firefox
 ```
