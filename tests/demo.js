@@ -1,4 +1,5 @@
 module.exports = {
+  '@tags' : ['demo'],
   'Demo test Google' : function (browser) {
     browser
       .url('https://www.google.com')

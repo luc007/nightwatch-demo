@@ -1,15 +1,19 @@
 {
   "name": "nightwatch-walmart-demo",
   "version": "1.0.0",
-  "description": "Walmart Canada - E2E Automation",
+  "description": "Walmart Canada - Test Automation",
   "author": {
     "name": "Mung Thai",
     "email": "mung.thai@outlook.com"
   },
-  "license": "MIT",
+  "homepage": "http://nightwatchjs.org",
+  "licenses": {
+    "type": "MIT",
+    "url": "https://raw.github.com/luc007/nightwatch-demo/master/LICENSE" 
+  },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/luc007/nightwatch-demo.git"
   },
   "dependencies": {},
   "main": "nightwatch.js",
