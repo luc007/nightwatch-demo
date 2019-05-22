@@ -5,9 +5,31 @@
 
   <testsuite name="walmart-demo"
     errors="0" failures="0" hostname="" id="" package="walmart-demo" skipped="0"
-    tests="1" time="14.31" timestamp="">
+    tests="1" time="36.85" timestamp="">
   
-    <testcase name="Demo Walmart search test using page objects" classname="walmart-demo" time="14.31" assertions="3">
+    <testcase name="Search for TV" classname="walmart-demo" time="36.85" assertions="14">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 

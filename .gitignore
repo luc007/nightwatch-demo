@@ -1,0 +1,8 @@
+node_module
+output
+reports
+screenshots
+log
+.xml
+.idea
+.env
