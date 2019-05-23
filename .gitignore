@@ -3,6 +3,6 @@ output
 reports
 screenshots
 log
-.xml
-.idea
-.env
+*.xml
+*.idea
+*.env

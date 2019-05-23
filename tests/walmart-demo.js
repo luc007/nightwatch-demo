@@ -35,8 +35,12 @@ module.exports = {
              .clickProceedCheckOut()
              .clickEditEmailAddress()
              .setEmailAddress('mung.thai@outlook.com')
-             .clickNextButton();
-             
+             .clickNextButton()
+             .clickPickupTab()
+             .setFirstName("Mung")
+             .setLastName("Thai")
+             .setPostCode("KJ2 4p4")
+             .clickSearchButton();
      },
 
     after: function(browser) {
