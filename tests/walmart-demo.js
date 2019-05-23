@@ -1,5 +1,3 @@
-//var homePage = require('../page_objects/homePage')
-
 module.exports = {
 
    // '@tags': ['walmart'],    // This tags to run
@@ -10,7 +8,7 @@ module.exports = {
         .maximizeWindow();
     },
 
-   'Search for TV': function( browser ) {
+   'Search to buy Samsung Smart TV': function( browser ) {
         const homePage = browser.page.homePage();
         homePage
             .navigate()

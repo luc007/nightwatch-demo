@@ -1,0 +1,22 @@
+Continuous Integration readness (Jenkins):
+
+1. Launch Jenkins (ie: java -jar Jenkins.war)
+2. Install Nodejs plugins
+3. Create New Item:
+    - Give an item name: "Walmart-Demo"
+    - Select Freestyle project
+4. In General Tab:
+    - Check "GitHub project" 
+    - Project url: "https://github.com/luc007/nightwatch-demo/"
+5. In Source Code Management:
+    - Select "Git"
+    - Repositories Url: "https://github.com/luc007/nightwatch-demo/"
+          Credentials: "luc007"  (note: I already have ssh key to access the git Repositories)
+    - Branches to build: "*/master"
+6. In Build Environment:
+    - Check "Delete workspace before build starts"
+7. In Build:
+    - Execute Windows batch command:
+        Command: "node .\bin\nightwatch.js -e chrome --reporter html-reporter.js"
+8. Save and Run
+

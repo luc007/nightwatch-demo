@@ -1,85 +1,79 @@
+const pauseTime = 1000;
 
 const checkOutCommands = {
     clickCheckOut() {
-        this.waitForElementVisible('@checkOut', 1000)
-        .click('@checkOut')
-        .api.pause(1000);
-
+        this.waitForElementVisible('@checkOut', pauseTime)
+        .click('@checkOut');
         return this;
     },
 
     clickProceedCheckOut() {
-        this.waitForElementVisible('@proceedToCheckOut', 1000)
-        .click('@proceedToCheckOut')
-        .api.pause(2000);
-
+        this.waitForElementVisible('@proceedToCheckOut', pauseTime)
+        .click('@proceedToCheckOut');
         return this;
     },
 
     clickEditEmailAddress() {
-        this.waitForElementVisible('@editEmailAddressButton', 1000)
+        this.waitForElementVisible('@editEmailAddressButton', pauseTime)
         .click('@editEmailAddressButton');
-
         return this;
     },
 
     setEmailAddress(email) {
-        this.waitForElementVisible('@editEmailAddressButton', 1000)
-        .setValue('@mailTextField', email)
-        .api.pause(1000);
-
+        this.waitForElementVisible('@editEmailAddressButton', pauseTime)
+        .setValue('@mailTextField', email);
         return this;
     },
 
     clickNextButton() {
-        this.waitForElementVisible('@nextButton', 1000)
-        .click('@nextButton')
-        .api.pause(1000);
-
+        this.waitForElementVisible('@nextButton', pauseTime)
+        .click('@nextButton');
         return this;
     },
 
     clickPickupTab() {
-        this.waitForElementVisible('@pickupTab', 1000)
-        .click('@pickupTab')
-        .api.pause(1000);
-
+        this.waitForElementVisible('@pickupTab', pauseTime)
+        .click('@pickupTab');
         return this;
     },
 
     setFirstName(value) {
-        this.waitForElementVisible('@firstNameTextField', 1000)
-        .setValue('@firstNameTextField', value)
-        .api.pause(1000);
-
+        this.waitForElementVisible('@firstNameTextField', pauseTime)
+        .setValue('@firstNameTextField', value);
         return this;
     },
 
     setLastName(value) {
-        this.waitForElementVisible('@lastNameTextField', 1000)
-        .setValue('@lastNameTextField', value)
-        .api.pause(1000);
-
+        this.waitForElementVisible('@lastNameTextField', pauseTime)
+        .setValue('@lastNameTextField', value);
         return this;
     },
 
     setPostCode(value) {
-        this.waitForElementVisible('@postcodeTextField', 1000)
+        this.waitForElementVisible('@postcodeTextField', pauseTime)
         .clearValue('@postcodeTextField')
-        .setValue('@postcodeTextField', value)
-        .api.pause(1000);
-
+        .setValue('@postcodeTextField', value);
         return this;
     },
 
     clickSearchButton() {
-        this.waitForElementVisible('@searchButton', 1000)
-        .click('@searchButton')
-        .api.pause(3000);
+        this.waitForElementVisible('@searchButton', pauseTime)
+        .click('@searchButton');
+        return this;
+    },
 
+    clickStoreLocation() {
+        this.waitForElementVisible('@storeLocation', pauseTime)
+        .click('@storeLocation');
+        return this;
+    },
+
+    clickContinueButton() {
+        this.getLocationInView('@continueButton', pauseTime)
+        .waitForElementVisible('@continueButton', pauseTime)
+        .click('@continueButton');
         return this;
     }
-
 };
 
 module.exports = {
@@ -103,6 +97,14 @@ module.exports = {
         firstNameTextField: 'input[id="pickup-first-name"]',
         lastNameTextField: 'input[id="pickup-last-name"]',
         postcodeTextField: 'input[id="pickup-postal-code-search"]',
-        searchButton: 'button[id="pickup-postal-code-search-btn"]'
+        searchButton: 'button[id="pickup-postal-code-search-btn"]',
+        storeLocation: {
+            selector: '//*[@id="store-locations"]/li[1]/label/input#store-locations > li:nth-child(1) > label > input',
+            locateStrategy: 'css selector'
+        },
+        continueButton: {
+            selector: '/html//div[@id="step-2a"]//button[@type="submit"]',
+            locateStrategy: 'xpath'
+        }
     }
-}
+};
