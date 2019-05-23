@@ -39,7 +39,7 @@ module.exports = {
              .clickPickupTab()
              .setFirstName("Mung")
              .setLastName("Thai")
-             .setPostCode("KJ2 4p4")
+             .setPostCode("K2J4p4")
              .clickSearchButton();
      },
 
