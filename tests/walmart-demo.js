@@ -1,14 +1,15 @@
+//var homePage = require('../page_objects/homePage')
+
 module.exports = {
 
-    // executes before test run
-    before: function(browser) {
+   // '@tags': ['walmart'],    // This tags to run
+   // '@disabled': false,      // This will prevent the test module from running.
+   before: function(browser) {
         console.log('Before test suite');
         browser
         .maximizeWindow();
     },
 
-//   '@tags': ['walmart'],    // This tags
-//   '@disabled': false,      // This will prevent the test module from running.
    'Search for TV': function( browser ) {
         const homePage = browser.page.homePage();
         homePage

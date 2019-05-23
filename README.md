@@ -15,10 +15,20 @@ $ npm install
 
 2) Download the `selenium-server-standalone-3.141.59' or newer from http://selenium-release.storage.googleapis.com/index.html and place it in your `./lib` folder - remember to update `nightwatch.json` if you download a newer version.
 
-3) Download the `chromedriver` from http://chromedriver.storage.googleapis.com/index.html and `geckodriver` from https://github.com/mozilla/geckodriver and place both drivers in your `./lib/drivers` folder
+3) Install [chromedriver] and [geckodriver]:
+```sh
+$ npm install chromedriver
+$ npm install geckodriver
+```
 
 4) To run the test with chrome or firefox or both browsers:
 ```sh
-$ node nightwatch.js -e <chrome> | <firefox>
-$ node nightwatch.js -e chrome,firefox
+$ node ./bin/nightwatch.js -e chrome | firefox
+$ node ./bin/nightwatch.js -e chrome,firefox
+```
+
+5) To run the test with chrome or firefox to generate report.
+Note: The report will generated under `./reports` folder with <browser name>_<version>_Windows_*.html file
+```sh
+$ node ./bin/nightwatch.js -e chrome | firefox --reporter html-reporter.js
 ```
