@@ -28,7 +28,7 @@ $ node ./bin/nightwatch.js -e chrome,firefox
 ```
 
 5) To run the test with chrome or firefox to generate report.
-Note: The report will generated under `./reports` folder with <browser name>_<version>_Windows_*.html file
+Note: The report will generated under `./reports` folder with [browser name][version]_Windows_*.html file
 ```sh
 $ node ./bin/nightwatch.js -e chrome | firefox --reporter html-reporter.js
 ```
