@@ -19,6 +19,7 @@ $ npm install
 ```sh
 $ npm install chromedriver
 $ npm install geckodriver
+$ npm install nightwatch-cucumber
 ```
 
 4) To run the test with chrome or firefox or both browsers:

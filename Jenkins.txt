@@ -1,4 +1,4 @@
-Continuous Integration readness (Jenkins):
+Continuous Integration readiness (Jenkins):
 
 1. Launch Jenkins (ie: java -jar Jenkins.war)
 2. Install Nodejs plugins
