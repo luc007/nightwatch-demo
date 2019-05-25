@@ -1,8 +1,10 @@
-node_module
+bin
+lib
+node_modules
 output
 reports
 screenshots
 log
+*.log
 *.xml
-*.idea
-*.env
+*.png

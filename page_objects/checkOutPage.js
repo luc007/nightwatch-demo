@@ -1,9 +1,10 @@
 const pauseTime = 1000;
 
 const checkOutCommands = {
-    clickCheckOut() {
+    clickCheckout() {
         this.waitForElementVisible('@checkOut', pauseTime)
-        .click('@checkOut');
+        .click('@checkOut')
+        .api.pause(pauseTime);
         return this;
     },
 
@@ -73,6 +74,16 @@ const checkOutCommands = {
         .waitForElementVisible('@continueButton', pauseTime)
         .click('@continueButton');
         return this;
+    },
+
+    getNumberItemsInCart(text) {
+        this.waitForElementVisible('body', 1000)
+        .getText('@itemsInShoppingCart', function(result) {
+            if(result.status !== -1) {
+                this.assert.equal(result.text, text);
+            }
+        });
+        return this;
     }
 };
 
@@ -80,7 +91,7 @@ module.exports = {
     commands: [checkOutCommands],
     elements: {
         checkOut: {
-            selector: '//*[text()="Checkout"]',
+            selector: '//*[@id="atc-root"]//button[text()="Checkout"]',
             locateStrategy: 'xpath'
         },
         proceedToCheckOut: '#cart-aside-checkout-btn',
@@ -105,6 +116,9 @@ module.exports = {
         continueButton: {
             selector: '/html//div[@id="step-2a"]//button[@type="submit"]',
             locateStrategy: 'xpath'
+        },
+        itemsInShoppingCart: {
+            selector: 'nav-cart'
         }
     }
 };
