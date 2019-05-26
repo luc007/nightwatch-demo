@@ -7,6 +7,7 @@ const {
   stopWebDriver,
   getNewScreenshots
 } = require('nightwatch-api');
+
 const reporter = require('cucumber-html-reporter');
 
 setDefaultTimeout(60000);

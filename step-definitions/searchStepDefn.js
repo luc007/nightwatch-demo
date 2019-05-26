@@ -1,20 +1,20 @@
 const { client } = require('nightwatch-api');
 const { Given, Then, When } = require('cucumber');
 
-const mainPage = client.page.mainPage();
-const samsungTVPage = client.page.electronicPage();
+const searchPage = client.page.searchPage();
+const samsungTVPage = client.page.electronicsPage();
 const addToCartPage = client.page.addToCartPage();
 const checkoutPage = client.page.checkoutPage();
 
 Given(/^I open Walmart`s search page$/, async () => {
-  return mainPage
+  return searchPage
     .maximizeWindow()
     .navigate()
-    .waitForElementVisible('body', 1000)
+    .waitForElementVisible('body', 2000)
 });
 
 When(/^I entered for search "(.*?)"$/, async text => {
-    await mainPage.setSearch(text);
+    await searchPage.setSearch(text);
 });
 
 When(/^I selected an item "(.*?)"$/, async text => {
@@ -34,6 +34,6 @@ When(/^I clicked Checkout$/, async () => {
  });
 
 Then(/^the title is "(.*?)"$/, async text => {
-    await mainPage.assert.title(text);
+    await searchPage.assert.title(text);
 })
 

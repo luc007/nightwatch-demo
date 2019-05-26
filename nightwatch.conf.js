@@ -36,6 +36,7 @@ module.exports = {
                 browserName: 'chrome',
                 javascriptEnabled: true,
                 acceptSslCerts: true,
+                elementScrollBehavior: 1,
                 chromeOptions: {
                     args: [
                         '--disable-web-security',
@@ -52,7 +53,9 @@ module.exports = {
             },
             desiredCapabilities: {
                 browserName: 'firefox',
-                marionette: true
+                javascriptEnabled: true,
+                acceptSslCerts: true,
+                elementScrollBehavior: 1
             }
         }
     }

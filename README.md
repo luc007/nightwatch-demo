@@ -13,23 +13,15 @@ $ cd nightwatch-demo
 $ npm install
 ```
 
-2) Download the `selenium-server-standalone-3.141.59' or newer from http://selenium-release.storage.googleapis.com/index.html and place it in your `./lib` folder - remember to update `nightwatch.json` if you download a newer version.
-
-3) Install [chromedriver] and [geckodriver]:
+2) Install:
 ```sh
-$ npm install chromedriver
-$ npm install geckodriver
-$ npm install nightwatch-cucumber
+$ npm install nightwatch nightwatch-api cucumber cucumber-html-reporter cucumber-pretty chromedriver geckodriver cross-env --save-dev
 ```
 
-4) To run the test with chrome or firefox or both browsers:
+3) To run the test:
 ```sh
-$ node ./bin/nightwatch.js -e chrome | firefox
-$ node ./bin/nightwatch.js -e chrome,firefox
+$ npm run test:chrome
 ```
 
-5) To run the test with chrome or firefox to generate report.
-Note: The report will generated under `./reports` folder with [browser name][version]_Windows_*.html file
-```sh
-$ node ./bin/nightwatch.js -e chrome | firefox --reporter html-reporter.js
-```
+4) To run the test with chrome or firefox to generate report.
+Note: The report will generated under `./reports` folder, it will launch cucumber_report.html 

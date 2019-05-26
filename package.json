@@ -11,7 +11,6 @@
     "type": "git",
     "url": "https://github.com/luc007/nightwatch-demo.git"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -32,7 +31,6 @@
   "scripts": {
     "test:chrome": "cross-env NIGHTWATCH_ENV=chrome npm test",
     "test:firefox": "cross-env NIGHTWATCH_ENV=firefox npm test",
-    "test": "mkdirp reports && cucumber-js --require-module babel-core/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:reports/cucumber_report.json",
-    "debug": "cross-env DEBUG=nightwatch-api NIGHTWATCH_ENV=firefox NIGHTWATCH_VERBOSE=true node --inspect-brk ./node_modules/cucumber/bin/cucumber-js --require-module babel-core/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
+    "test": "mkdirp reports && cucumber-js --require-module babel-core/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:reports/cucumber_report.json features/search.feature features/electronics.feature"
   }
 }
