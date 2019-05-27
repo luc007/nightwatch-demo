@@ -2,14 +2,14 @@
 const searchCommands = {
 
   setSearch(value) {
-    this.waitForElementVisible('@searchBar', 1000)
+    this  
     .setValue('@searchBar', value)
     .click('@submitButton')
     return this;
   },
 
   submit() {
-      this.waitForElementVisible('@submitButton', 1000)
+      this 
       .click('@submitButton')
       return this;   // Return page object for chaining
     }

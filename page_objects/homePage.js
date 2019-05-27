@@ -1,7 +1,7 @@
 
 const homePageCommand = {
     clickMainstaysBathTowel() {
-        this.waitForElementVisible('@mainstaysBathTowel', 3000)
+        this    
         .click('@mainstaysBathTowel')
         .api.pause(3000);
         return this;

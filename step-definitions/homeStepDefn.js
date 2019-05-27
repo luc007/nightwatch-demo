@@ -3,7 +3,7 @@ const { Given, Then, When } = require('cucumber');
 
 const commonPage = client.page.commonPage();
 const homePage = client.page.homePage();
-const searchPage = client.page.searchPage();
+
 
 Given(/^I open Walmart`s Home page$/, async () => {
       return homePage

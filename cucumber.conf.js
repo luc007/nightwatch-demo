@@ -13,9 +13,9 @@ const reporter = require('cucumber-html-reporter');
 setDefaultTimeout(60000);
 
 BeforeAll(async () => {
- await startWebDriver({ env: process.env.NIGHTWATCH_ENV || 'firefox' });
- //await startWebDriver(); 
- await createSession();
+ //await startWebDriver({ env: process.env.NIGHTWATCH_ENV || 'chrome' });
+  await startWebDriver();
+  await createSession();
 });
 
 AfterAll(async () => {
@@ -30,7 +30,7 @@ AfterAll(async () => {
       launchReport: true,
       metadata: {
         'App Version': '0.3.2',
-        'Test Environment': 'POC'
+        'Test Environment': 'PRODUCTION'
       }
     });
   }, 1000);

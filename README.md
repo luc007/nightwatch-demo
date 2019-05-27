@@ -10,12 +10,11 @@ Demo test project for [Testing apps with Nightwatch].
 ```sh
 $ git clode https://github.com/luc007/nightwatch-demo.git
 $ cd nightwatch-demo
-$ npm install
 ```
 
 2) Install:
 ```sh
-$ npm install nightwatch nightwatch-api cucumber cucumber-html-reporter cucumber-pretty chromedriver geckodriver cross-env --save-dev
+$ npm install --save-dev nightwatch nightwatch-api cucumber cucumber-html-reporter cucumber-pretty selenium-server dirp chromedriver geckodriver
 ```
 
 3) To run the test:

@@ -25,12 +25,14 @@
     "geckodriver": "^1.16.2",
     "nightwatch": "^1.1.11",
     "nightwatch-api": "^2.3.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "selenium-server": "^3.141.59"
   },
   "main": "index.js",
   "scripts": {
     "test:chrome": "cross-env NIGHTWATCH_ENV=chrome npm test",
     "test:firefox": "cross-env NIGHTWATCH_ENV=firefox npm test",
-    "test": "mkdirp reports && cucumber-js --require-module babel-core/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:reports/cucumber_report.json features/search.feature features/electronics.feature features/home.feature"
-  }
+    "test": "mkdirp reports && cucumber-js --require-module babel-core/register --require cucumber.conf.js  --require step-definitions --format node_modules/cucumber-pretty --format json:reports/cucumber_report.json features/search.feature features/electronics.feature features/home.feature"
+  },
+  "dependencies": {}
 }

@@ -1,56 +1,38 @@
-
-const pauseTime = 1000;
-
 const brandCommands = {
-    clickOnId(id) {
-        this.useXpath()
-        .waitForElementVisible('//*[@id="'+ id + '"]', pauseTime)
-        .click('//*[@id="'+ id + '"]');
-        return this;
-    },
-
-    clickOnTitle(title) {
-        this.useXpath()
-        .waitForElementVisible('//*[@title="'+ title + '"]', 3000)
-        .click('//*[@title="'+ title + '"]')
-        .api.pause(2000);
-        return this;
-    },
-
     clickHeaderElectronics() {
-        this.click('@headerElectronics', pauseTime);
+        this.click('@headerElectronics', 1000);
         return this;
     },
 
     clickTVAndVideo() {
-        this.click('@tvAndVideo', pauseTime);
+        this.click('@tvAndVideo', 1000);
         return this;
     },
 
     clickTVs() {
-        this.click('@tvs', pauseTime);
+        this.click('@tvs', 1000);
         return this;
     },
 
     clickSmartTV() {
-        this.click('@smartTV', pauseTime);
+        this.click('@smartTV', 1000);
         return this;
     },
 
     clickBrand() {
-        this.waitForElementVisible('@brand', pauseTime)
+        this    
         .click('@brand')
         return this;
     },
 
     clickBrandSamsung() {
-        this.waitForElementVisible('@brandSamsung', pauseTime)
+        this    
         .click('@brandSamsung')
         return this;
     },
 
     clickSamsungCurved() {
-        this.waitForElementVisible('@samsungCurved', 2000)
+        this    
         .click('@samsungCurved')
         return this;
     },

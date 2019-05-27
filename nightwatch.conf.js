@@ -1,5 +1,6 @@
 const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
+const seleniumServer = require('selenium-server');
 
 
 module.exports = {
@@ -19,13 +20,16 @@ module.exports = {
                 on_failure: true,
                 path: './screenshots'   
             },
-            webdriver: {
+            selenium: {
                 launch_url: 'https://www.walmart.ca/en',
                 start_process: true,
-                server_path: chromedriver.path,
-                port: 5555,
-                cli_args: ['--port=5555']
-            }
+                server_path: seleniumServer.path,
+                port: 4444,
+                cli_args: {
+                    'webdriver.chrome.driver': chromedriver.path,
+                    'webdriver.gecko.driver': geckodriver.path
+                  },
+            },
         },
         'skip_testcases_on_fail': true,
 

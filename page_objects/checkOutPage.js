@@ -1,83 +1,81 @@
-const pauseTime = 1000;
-
 const checkOutCommands = {
     clickCheckout() {
-        this.waitForElementVisible('@checkOut', pauseTime)
+        this    
         .click('@checkOut')
-        .api.pause(pauseTime);
+        .api.pause(1000);
         return this;
     },
 
     clickProceedCheckOut() {
-        this.waitForElementVisible('@proceedToCheckOut', pauseTime)
+        this    
         .click('@proceedToCheckOut');
         return this;
     },
 
     clickEditEmailAddress() {
-        this.waitForElementVisible('@editEmailAddressButton', pauseTime)
+        this    
         .click('@editEmailAddressButton');
         return this;
     },
 
     setEmailAddress(email) {
-        this.waitForElementVisible('@editEmailAddressButton', pauseTime)
+        this    
         .setValue('@mailTextField', email);
         return this;
     },
 
     clickNextButton() {
-        this.waitForElementVisible('@nextButton', pauseTime)
+        this    
         .click('@nextButton');
         return this;
     },
 
     clickPickupTab() {
-        this.waitForElementVisible('@pickupTab', pauseTime)
+        this    
         .click('@pickupTab');
         return this;
     },
 
     setFirstName(value) {
-        this.waitForElementVisible('@firstNameTextField', pauseTime)
+        this    
         .setValue('@firstNameTextField', value);
         return this;
     },
 
     setLastName(value) {
-        this.waitForElementVisible('@lastNameTextField', pauseTime)
+        this    
         .setValue('@lastNameTextField', value);
         return this;
     },
 
     setPostCode(value) {
-        this.waitForElementVisible('@postcodeTextField', pauseTime)
+        this    
         .clearValue('@postcodeTextField')
         .setValue('@postcodeTextField', value);
         return this;
     },
 
     clickSearchButton() {
-        this.waitForElementVisible('@searchButton', pauseTime)
+        this    
         .click('@searchButton');
         return this;
     },
 
     clickStoreLocation() {
-        this.waitForElementVisible('@storeLocation', pauseTime)
+        this    
         .click('@storeLocation');
         return this;
     },
 
     clickContinueButton() {
-        this.getLocationInView('@continueButton', pauseTime)
-        .waitForElementVisible('@continueButton', pauseTime)
+        this.getLocationInView('@continueButton', 1000)
+        .waitForElementVisible('@continueButton', 1000)
         .click('@continueButton');
         return this;
     },
 
     getNumberItemsInCart(text) {
-        this.waitForElementVisible('body', 1000)
+        this    
         .getText('@itemsInShoppingCart', function(result) {
             if(result.status !== -1) {
                 this.assert.equal(result.text, text);

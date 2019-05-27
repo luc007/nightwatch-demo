@@ -1,6 +1,6 @@
 const addToCartPageCommands = {
     clickAddToCart() {
-        this.waitForElementVisible('@addToCart', 2000)
+        this    
         .click('@addToCart')
         .api.pause(1000)
         return this;
