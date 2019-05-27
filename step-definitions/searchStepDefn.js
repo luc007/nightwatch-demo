@@ -7,7 +7,7 @@ const addToCartPage = client.page.addToCartPage();
 const checkoutPage = client.page.checkoutPage();
 
 Given(/^I open Walmart`s search page$/, async () => {
-  return searchPage
+   return searchPage
     .maximizeWindow()
     .navigate()
     .waitForElementVisible('body', 2000)

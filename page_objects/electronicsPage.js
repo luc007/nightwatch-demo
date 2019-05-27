@@ -11,7 +11,7 @@ const brandCommands = {
 
     clickOnTitle(title) {
         this.useXpath()
-        .waitForElementVisible('//*[@title="'+ title + '"]', pauseTime)
+        .waitForElementVisible('//*[@title="'+ title + '"]', 3000)
         .click('//*[@title="'+ title + '"]')
         .api.pause(2000);
         return this;

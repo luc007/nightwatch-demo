@@ -6,6 +6,7 @@ const departmentPageCommands = {
 }
 
 module.exports = {
+    url: "https://www.walmart.ca/en/home/N-105",
     commands: [departmentPageCommands],
     elements: {
         department: {

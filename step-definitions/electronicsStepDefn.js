@@ -2,14 +2,13 @@ const { client } = require('nightwatch-api');
 const { Given, Then, When } = require('cucumber');
 
 const electronicsPage = client.page.electronicsPage();
-const addToCartPage = client.page.addToCartPage();
-const checkoutPage = client.page.checkoutPage();
+const searchPage = client.page.searchPage();
 
-Given(/^I open Walmart`s electronics page$/, async () => {
+Given(/^I open Walmart`s Electronics page$/, async () => {
   return electronicsPage
     .maximizeWindow()
     .navigate()
-    .waitForElementVisible('body', 1000)
+    .waitForElementVisible('body', 5000);
 });
 
 When(/^I clicked on "(.*?)"$/, async text => {

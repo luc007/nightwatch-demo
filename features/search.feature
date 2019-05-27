@@ -1,6 +1,6 @@
 Feature: Search 
 
-Scenario Outline: Searching Samsung Smart TV
+Scenario Outline: Searching > Smart TV
 
   Given I open Walmart`s search page
   When I entered for search "<search>"

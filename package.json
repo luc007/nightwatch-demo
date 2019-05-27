@@ -31,6 +31,6 @@
   "scripts": {
     "test:chrome": "cross-env NIGHTWATCH_ENV=chrome npm test",
     "test:firefox": "cross-env NIGHTWATCH_ENV=firefox npm test",
-    "test": "mkdirp reports && cucumber-js --require-module babel-core/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:reports/cucumber_report.json features/search.feature features/electronics.feature"
+    "test": "mkdirp reports && cucumber-js --require-module babel-core/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:reports/cucumber_report.json features/search.feature features/electronics.feature features/home.feature"
   }
 }

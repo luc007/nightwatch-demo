@@ -1,6 +1,7 @@
 const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
 
+
 module.exports = {
     custom_commands_path: "",
     custom_assertions_path: "",
@@ -19,7 +20,7 @@ module.exports = {
                 path: './screenshots'   
             },
             webdriver: {
-                launch_url: 'http://walmart.ca',
+                launch_url: 'https://www.walmart.ca/en',
                 start_process: true,
                 server_path: chromedriver.path,
                 port: 5555,
