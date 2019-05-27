@@ -8,7 +8,7 @@ Demo test project for [Testing apps with Nightwatch].
 
 1) Install [Node.js](http://nodejs.org) if not present and clone the repo:
 ```sh
-$ git clode https://github.com/luc007/nightwatch-demo.git
+$ git clone https://github.com/luc007/nightwatch-demo.git
 $ cd nightwatch-demo
 ```
 
