@@ -17,6 +17,6 @@ Continuous Integration readiness (Jenkins):
     - Check "Delete workspace before build starts"
 7. In Build:
     - Execute Windows batch command:
-        Command: "node .\bin\nightwatch.js -e chrome --reporter html-reporter.js"
+        Command: "npm run test:chrome"
 8. Save and Run
 
